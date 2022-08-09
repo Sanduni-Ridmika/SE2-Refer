@@ -21,7 +21,7 @@
                 <form action="RegisterServlet" method="post">
                     <p>Username</p>
                     <input type="text" placeholder="Username" name="name" required>
-                    <p>Useremail</p>
+                    <p>Email</p>
                     <input type="text" placeholder="Useremail" name="email" required>
                     <p>Password</p>
                     <input type="password" placeholder="Password" name="password" required>

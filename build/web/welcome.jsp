@@ -11,21 +11,46 @@
         response.sendRedirect("index.jsp");
     }
 %>
+
 <!DOCTYPE html>
-<html>
-    <head>
-        <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
-        <title>JSP Page</title>
-    </head>
-    <body>
-        <h1>
-            Welcome, <%= user.getName()%> </h1>
-        <h3>
-            Your Account ID: <%= user.getId()%> </h3>
-        <h3>
-            Your Email: <%= user.getEmail()%> </h3>
-        <h3>
-            Your Password: <%= user.getPassword()%> </h3>
-        <button> <a href="LogoutServlet">Log Out</a> </button>
-    </body>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.2/css/all.min.css"/>
+    <link href="CSS/welcome.css" rel="stylesheet" type="text/css"/>
+   </head>
+<body>
+    <img class="img" src="img/hotel2.jpg">
+  <div class="center">
+      <div class="title"><h1>Hotel Dreamy View</h1></div>
+    <div class="sub_title">We believe leisure is an art</div>
+    <div class="btns">
+            <button><a href="./reservations.jsp" class="btn btn-primary">Book Now</a></button>
+    </div>
+  </div>
+    
+    <div class="container">
+  <div class="box">
+    <img src="https://source.unsplash.com/1000x800">
+    <span>Regular</span>
+  </div>
+  <div class="box">
+    <img src="https://source.unsplash.com/1000x802">
+    <span>Semi Deluxe</span>
+  </div>
+  <div class="box">
+    <img src="https://source.unsplash.com/1000x804">
+    <span>Deluxe</span>
+  </div>
+  <div class="box">
+    <img src="https://source.unsplash.com/1000x806">
+    <span>King</span>
+  </div>
+</div>
+    
+    <div id="footer-div"><%@ include file="./footer.jsp"%></div>
+</body>
 </html>
+
