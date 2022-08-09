@@ -1,80 +1,85 @@
 <%-- 
-    Document   : reservations
-    Created on : 9-Aug-2022, 1:09:29 PM
+    Document   : payment
+    Created on : 9-Aug-2022, 6:50:06 PM
     Author     : Sanduni Ridmika
 --%>
 
-    
 <%@page contentType="text/html" pageEncoding="UTF-8"%>
 <!DOCTYPE html>
 <html>
     <head>
         <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
-        <title>Reservations</title>
+        <title>Reservation Payment</title>
         <link href="http://fonts.cdnfonts.com/css/poppins" rel="stylesheet">
         <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3" crossorigin="anonymous">
         <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-ka7Sk0Gln4gmtz2MlQnikT1wXgYsOg+OMhuP+IlRH9sENBO0LRn5q+8nbTov4+1p" crossorigin="anonymous"></script>
-        <link href="CSS/reservations.css" rel="stylesheet" type="text/css"/>
         <link href="CSS/footer.css" rel="stylesheet" type="text/css"/>
+        <link href="CSS/payment.css" rel="stylesheet" type="text/css"/>
+        
     </head>
     <body>
-        <div class="container reserve ">
-            <div class="row">
-                <div class="col-6 form-header">
-                    <span>Book Yours Now!</span>
-                </div>
+        <br><br>
+        <div class="reserve-header-image">
+            <h1 class="header-text">Payment Method</h1>
+        </div>
+        <p class="pro">Proceed to Pay:</p>
+        
+        <div class="form-container" style="margin-top: 5px; margin-bottom: 35px">
+            
+            
+        <!--Paypal Integration-->
+        <div id="smart-button-container">
+            <div style="text-align: center;">
+                <div id="paypal-button-container"></div>
             </div>
         </div>
+        <script src="https://www.paypal.com/sdk/js?client-id=AdNH0V50CjsGNdacW_MycidixGny38li19VxpYZR3TJA2d4DtbWIDGcuJlCxhl9G0vChoGxEH2U__P9L&disable-funding=venmo&currency=USD" data-sdk-integration-source="button-factory"></script>
+        <script>
+            function initPayPalButton() {
+                paypal.Buttons({
+                    style: {
+                        shape: 'rect',
+                        color: 'gold',
+                        layout: 'vertical',
+                        label: 'paypal',
 
-        <div class="container form-container ">
-            <div class="reserve2">
-                <form class="form" method="POST" action="../reservation" >
-                    <div class="input_field">
-                        <label>Select room type</label>
-                         <select class="browser-default custom-select select_input" name="roomType">
-                            <option selected> - Select room type </option>
-                            <option value="Regular">Regular</option>
-                            <option value="SemiDeluxe">Semi Deluxe</option>
-                            <option value="Deluxe">Deluxe</option>
-                            <option value="King">King</option>
-                        </select>
-                    </div>
-                    <div class="input_field">
-                        <label>Number of Rooms</label>
-                        <input type="text" class="Num_input" name="num_of_rooms" required>
-                    </div>
-                    <div class="input_field">
-                        <label>Full Name</label>
-                        <input type="text" class="input" name="fname" required>
-                    </div>
-                    <div class="input_field">
-                        <label>Check In</label>
-                        <input id="date" type="date" class="input" name="checkIn" required>
-                    </div>
-                    <div class="input_field">
-                        <label>Check Out</label>
-                        <input id="date" type="date" class="input" name="checkOut" required>
-                    </div>
-                    <div class="input_field">
-                        <label>Phone Number</label>
-                        <input type="text" class="input" name="phoneNum" required>
-                    </div>
-                    <div class="input_field">
-                        <label>Email Address</label>
-                        <input type="text" class="input" name="emailAdd" required>
-                    </div>
-                    </div>
-                    <div class="input_field">
-                        <button><a href="./payment.jsp" class="btn">Proceed To Pay</a></button>
-                    </div>
-                    
-                </form>
-            </div>
-        </div>   
-        <br><br>
+                    },
+
+                    createOrder: function (data, actions) {
+                        return actions.order.create({
+                            purchase_units: [{"amount": {"currency_code": "USD", "value": 1}}]
+                        });
+                    },
+
+                    onApprove: function (data, actions) {
+                        return actions.order.capture().then(function (orderData) {
+
+                            // Full available details
+                            console.log('Capture result', orderData, JSON.stringify(orderData, null, 2));
+
+                            // Show a success message within this page, e.g.
+                            const element = document.getElementById('paypal-button-container');
+                            element.innerHTML = '';
+                            element.innerHTML = '<h3>Thank you for your payment!</h3>';
+
+                            // Or go to another URL:  actions.redirect('thank_you.html');
+
+                        });
+                    },
+
+                    onError: function (err) {
+                        console.log(err);
+                    }
+                }).render('#paypal-button-container');
+            }
+            initPayPalButton();
+        </script> 
         
-        <div class="container-fluid footer">
+        </div>
+        
+
+<div class="container-fluid footer">
             <div class="row">
                 <div class="col-4">
                     <div class="row">
@@ -82,7 +87,6 @@
                             Designed to inspire rest and relaxation, our sleek, a modern hotel room features a king of facilities and incredible sea views. Designed to inspire rest and relaxation, our sleek.
                         </p>
                     </div>
-                    
                 </div>
                 <div class="col-8 footer-form">
                     <h3>Contact Us</h3>
@@ -115,9 +119,9 @@
             </div>
         </div>
         <div class="container-fluid footer-copyright">
-            <p>Copyright: Hotel dreamy View 2022</p>
+            <p>Copyright: Hotel Dreamy View 2022</p>
         </div>
         
-        
-    </body>
+
+</body>
 </html>

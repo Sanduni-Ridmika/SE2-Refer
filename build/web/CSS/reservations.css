@@ -148,11 +148,10 @@ label
 .btn{
     max-width: 300px;
     width: 100%;
-    padding: 8px 10px;
+    padding: 10px 20px;
     font-size: 15px;
     border: 0;
     background: #FFC164;
-    margin-top: 40px;
     color:#fff;
     cursor: pointer;
     border-radius: 15px;

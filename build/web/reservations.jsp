@@ -4,7 +4,6 @@
     Author     : Sanduni Ridmika
 --%>
 
-
     
 <%@page contentType="text/html" pageEncoding="UTF-8"%>
 <!DOCTYPE html>
@@ -23,7 +22,7 @@
         <div class="container reserve ">
             <div class="row">
                 <div class="col-6 form-header">
-                    <span>Book Now</span>
+                    <span>Book Yours Now!</span>
                 </div>
             </div>
         </div>
@@ -67,7 +66,7 @@
                     </div>
                     </div>
                     <div class="input_field">
-                        <input type="submit" value="Check Availability" class="btn">
+                        <button><a href="./payment.jsp" class="btn">Proceed To Pay</a></button>
                     </div>
                     
                 </form>

@@ -4,7 +4,7 @@ To change this template file, choose Tools | Templates
 and open the template in the editor.
 */
 /* 
-    Created on : 9-Aug-2022, 1:11:45 PM
+    Created on : 9-Aug-2022, 7:24:38 PM
     Author     : Sanduni Ridmika
 */
 
@@ -21,21 +21,11 @@ body
     padding: 0 10px;
 }
 
-.reserve-header-image
-{
-    background-image: url('../Images/Gallery Header5.jpg');
-    height: 70vh;
-    background-repeat: no-repeat;
-    background-size: cover;
-    color: white;
-    text-align: center;
-    padding-top: 28vh;
-}
-
 .header-text
 {
-    font-size: 65px;
+    font-size: 55px;
     font-weight: bold;
+    color: #FFC164;
 }
 
 .reserve
@@ -66,7 +56,7 @@ body
 .dropdown-toggle
 {
     background-color: #EFFEFF;
-    min-width: 250px;
+    min-width: 200px;
     border-radius: 5px;
     box-border: 1px solid blue !important;
     min-height: 20px;
@@ -148,10 +138,11 @@ label
 .btn{
     max-width: 300px;
     width: 100%;
-    padding: 10px 20px;
+    padding: 8px 10px;
     font-size: 15px;
     border: 0;
     background: #FFC164;
+    margin-top: 40px;
     color:#fff;
     cursor: pointer;
     border-radius: 15px;
