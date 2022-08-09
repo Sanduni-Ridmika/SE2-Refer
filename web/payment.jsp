@@ -34,7 +34,7 @@
                 <div id="paypal-button-container"></div>
             </div>
         </div>
-        <script src="https://www.paypal.com/sdk/js?client-id=AdNH0V50CjsGNdacW_MycidixGny38li19VxpYZR3TJA2d4DtbWIDGcuJlCxhl9G0vChoGxEH2U__P9L&disable-funding=venmo&currency=USD" data-sdk-integration-source="button-factory"></script>
+        <script src="https://www.paypal.com/sdk/js?client-id=AZqmVQ1MBwZ6ZwYLO4vqM5YMHPJ9TwreV8KrGt-008vefR4X3J8XfGu-6KEjRj7QUFm8ErYt4PHPzdaA" data-sdk-integration-source="button-factory"></script>
         <script>
             function initPayPalButton() {
                 paypal.Buttons({
@@ -55,15 +55,15 @@
                     onApprove: function (data, actions) {
                         return actions.order.capture().then(function (orderData) {
 
-                            // Full available details
+                            // Available details
                             console.log('Capture result', orderData, JSON.stringify(orderData, null, 2));
 
-                            // Show a success message within this page, e.g.
+                            // Successfull message
                             const element = document.getElementById('paypal-button-container');
                             element.innerHTML = '';
-                            element.innerHTML = '<h3>Thank you for your payment!</h3>';
+                            element.innerHTML = '<h3>Your Payment is Successful <br>Thank you for your payment!</h3>';
 
-                            // Or go to another URL:  actions.redirect('thank_you.html');
+                            // show thank you message
 
                         });
                     },

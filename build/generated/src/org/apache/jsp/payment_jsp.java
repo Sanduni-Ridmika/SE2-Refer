@@ -73,7 +73,7 @@ public final class payment_jsp extends org.apache.jasper.runtime.HttpJspBase
       out.write("                <div id=\"paypal-button-container\"></div>\n");
       out.write("            </div>\n");
       out.write("        </div>\n");
-      out.write("        <script src=\"https://www.paypal.com/sdk/js?client-id=AdNH0V50CjsGNdacW_MycidixGny38li19VxpYZR3TJA2d4DtbWIDGcuJlCxhl9G0vChoGxEH2U__P9L&disable-funding=venmo&currency=USD\" data-sdk-integration-source=\"button-factory\"></script>\n");
+      out.write("        <script src=\"https://www.paypal.com/sdk/js?client-id=AZqmVQ1MBwZ6ZwYLO4vqM5YMHPJ9TwreV8KrGt-008vefR4X3J8XfGu-6KEjRj7QUFm8ErYt4PHPzdaA\" data-sdk-integration-source=\"button-factory\"></script>\n");
       out.write("        <script>\n");
       out.write("            function initPayPalButton() {\n");
       out.write("                paypal.Buttons({\n");
@@ -94,15 +94,15 @@ public final class payment_jsp extends org.apache.jasper.runtime.HttpJspBase
       out.write("                    onApprove: function (data, actions) {\n");
       out.write("                        return actions.order.capture().then(function (orderData) {\n");
       out.write("\n");
-      out.write("                            // Full available details\n");
+      out.write("                            // Available details\n");
       out.write("                            console.log('Capture result', orderData, JSON.stringify(orderData, null, 2));\n");
       out.write("\n");
-      out.write("                            // Show a success message within this page, e.g.\n");
+      out.write("                            // Successfull message\n");
       out.write("                            const element = document.getElementById('paypal-button-container');\n");
       out.write("                            element.innerHTML = '';\n");
-      out.write("                            element.innerHTML = '<h3>Thank you for your payment!</h3>';\n");
+      out.write("                            element.innerHTML = '<h3>Your Payment is Successful <br>Thank you for your payment!</h3>';\n");
       out.write("\n");
-      out.write("                            // Or go to another URL:  actions.redirect('thank_you.html');\n");
+      out.write("                            // show thank you message\n");
       out.write("\n");
       out.write("                        });\n");
       out.write("                    },\n");
