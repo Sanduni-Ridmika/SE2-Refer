@@ -3,8 +3,11 @@
  * To change this template file, choose Tools | Templates
  * and open the template in the editor.
  */
-package newpackage;
+package Controller;
 
+import Model.User;
+import Model.UserDatabase;
+import Model.ConnectionPro;
 import java.io.IOException;
 import java.io.PrintWriter;
 import javax.servlet.ServletException;
@@ -17,7 +20,7 @@ import javax.servlet.http.HttpSession;
  *
  * @author Sanduni Ridmika
  */
-public class LoginServlet extends HttpServlet {
+public class RegisterServlet extends HttpServlet {
 
     /**
      * Processes requests for both HTTP <code>GET</code> and <code>POST</code>
@@ -36,24 +39,31 @@ public class LoginServlet extends HttpServlet {
             out.println("<!DOCTYPE html>");
             out.println("<html>");
             out.println("<head>");
-            out.println("<title>Servlet LoginServlet</title>");            
+            out.println("<title>Servlet RegisterServlet</title>");            
             out.println("</head>");
             out.println("<body>");
             
-            String lEmail = request.getParameter("email");
-            String lPass = request.getParameter("password");
+            //fetch data from registration page
+            String name = request.getParameter("name");
+            String email = request.getParameter("email");
+            String password = request.getParameter("password");
             
-            UserDatabase db =  new UserDatabase(ConnectionPro.getConnection());
-            User user = db.logUser(lEmail, lPass);
+            //make user object
+            User userModel = new User(name, email, password);
             
-            if(user!=null){
-                HttpSession session = request.getSession();
-                session.setAttribute("loguser", user);
-                response.sendRedirect("welcome.jsp");
-            }else{
-                out.print("user not found");
+            //create a database model
+            UserDatabase regUser = new UserDatabase(ConnectionPro.getConnection());
+            if (regUser.saveUser(userModel)) 
+            {
+                response.sendRedirect("index.jsp");
+            } 
+            else
+            {
+                String errorMessage = "User Available";
+                HttpSession regSession = request.getSession();
+                regSession.setAttribute("RegError", errorMessage);
+                response.sendRedirect("registration.jsp");
             }
-
             out.println("</body>");
             out.println("</html>");
         }

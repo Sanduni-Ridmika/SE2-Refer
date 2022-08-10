@@ -4,7 +4,7 @@
     Author     : Sanduni Ridmika
 --%>
 
-<%@page import="newpackage.User"%>
+<%@page import="Model.User"%>
 <%@page contentType="text/html" pageEncoding="UTF-8"%>
 
 

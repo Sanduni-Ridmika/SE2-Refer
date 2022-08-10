@@ -3,7 +3,7 @@
  * To change this template file, choose Tools | Templates
  * and open the template in the editor.
  */
-package newpackage;
+package Controller;
 
 import java.io.IOException;
 import java.io.PrintWriter;
@@ -50,7 +50,7 @@ public class SendEmail extends HttpServlet {
         msg = request.getParameter("Message");
 
         final String username = "srwarnakulasooriya@students.nsbm.ac.lk";//your email id
-        final String password = "";// your password should type here
+        final String password = "sr584";// your password should type here
         Properties props = new Properties();
         props.put("mail.smtp.auth", true);
         props.put("mail.smtp.starttls.enable", true);
@@ -78,7 +78,8 @@ public class SendEmail extends HttpServlet {
             //out.println("Sending");
             Transport.send(message);
             out.println("<center><h2 style='color:green;'>Email Sent Successfully.</h2>");
-            out.println("Thank you " + name + ", your message has been submitted to us.<br> We will get back to you soon!</center>");
+            out.println("Thank you " + name + ", your message has been submitted to us.<br> We will get back to you soon!<br><br><br>"
+                    + "Click <a href=\"./welcome.jsp\" class=\"btn\">HERE</a> to go back</center>");
         } catch (Exception e) {
             out.println(e);
         }
