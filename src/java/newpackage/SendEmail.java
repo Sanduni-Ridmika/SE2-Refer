@@ -49,12 +49,12 @@ public class SendEmail extends HttpServlet {
         email = request.getParameter("email");
         msg = request.getParameter("Message");
 
-        final String username = "2000anuki@gmail.com";//your email id
-        final String password = "Chooty@28";// your password
+        final String username = "srwarnakulasooriya@students.nsbm.ac.lk";//your email id
+        final String password = "";// your password should type here
         Properties props = new Properties();
         props.put("mail.smtp.auth", true);
         props.put("mail.smtp.starttls.enable", true);
-        props.put("mail.smtp.host", "smtp.gmail.com");
+        props.put("mail.smtp.host", "smtp.office365.com");
         props.put("mail.smtp.port", "587");
         Session session = Session.getInstance(props,
                 new javax.mail.Authenticator() {
@@ -65,7 +65,7 @@ public class SendEmail extends HttpServlet {
                 });
         try {
             Message message = new MimeMessage(session);
-            message.setFrom(new InternetAddress(email));
+            message.setFrom(new InternetAddress(username));
             message.setRecipients(Message.RecipientType.TO, InternetAddress.parse(username));
             MimeBodyPart textPart = new MimeBodyPart();
             Multipart multipart = new MimeMultipart();
@@ -78,7 +78,7 @@ public class SendEmail extends HttpServlet {
             //out.println("Sending");
             Transport.send(message);
             out.println("<center><h2 style='color:green;'>Email Sent Successfully.</h2>");
-            out.println("Thank you " + name + ", your message has been submitted to us.</center>");
+            out.println("Thank you " + name + ", your message has been submitted to us.<br> We will get back to you soon!</center>");
         } catch (Exception e) {
             out.println(e);
         }

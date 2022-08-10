@@ -6,11 +6,7 @@
 
 <%@page import="newpackage.User"%>
 <%@page contentType="text/html" pageEncoding="UTF-8"%>
-<% User user = (User) session.getAttribute("loguser");
-    if(user==null){
-        response.sendRedirect("index.jsp");
-    }
-%>
+
 
 <!DOCTYPE html>
 <html lang="en" dir="ltr">
@@ -50,7 +46,8 @@
   </div>
 </div>
     
-    <div id="footer-div"><%@ include file="./footer.jsp"%></div>
+    <div id="footer-div"><%@include file="./footer.jsp"%></div>
+    
 </body>
 </html>
 
