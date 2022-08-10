@@ -12,6 +12,14 @@
         <servlet-name>LogoutServlet</servlet-name>
         <servlet-class>newpackage.LogoutServlet</servlet-class>
     </servlet>
+    <servlet>
+        <servlet-name>ContactUsForm</servlet-name>
+        <servlet-class>newpackage.ContactUsForm</servlet-class>
+    </servlet>
+    <servlet>
+        <servlet-name>SendEmail</servlet-name>
+        <servlet-class>newpackage.SendEmail</servlet-class>
+    </servlet>
     <servlet-mapping>
         <servlet-name>RegisterServlet</servlet-name>
         <url-pattern>/RegisterServlet</url-pattern>
@@ -23,6 +31,14 @@
     <servlet-mapping>
         <servlet-name>LogoutServlet</servlet-name>
         <url-pattern>/LogoutServlet</url-pattern>
+    </servlet-mapping>
+    <servlet-mapping>
+        <servlet-name>ContactUsForm</servlet-name>
+        <url-pattern>/ContactUsForm</url-pattern>
+    </servlet-mapping>
+    <servlet-mapping>
+        <servlet-name>SendEmail</servlet-name>
+        <url-pattern>/SendEmail</url-pattern>
     </servlet-mapping>
     <session-config>
         <session-timeout>

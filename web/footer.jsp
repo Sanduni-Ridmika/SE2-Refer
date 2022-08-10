@@ -28,7 +28,7 @@
                 </div>
                 <div class="col-8 footer-form">
                     <h3>Contact Us</h3>
-                    <form method="POST" action="../ContactUsForm">
+                    <form method="POST" action="SendEmail">
                         <div class="form-group row">
                             <label for="inputPassword" class="col-sm-4 col-form-label">Name</label>
                         <div class="col-sm-8">
@@ -39,6 +39,12 @@
                             <label for="inputPassword" class="col-sm-4 col-form-label">Phone Number</label>
                         <div class="col-sm-8">
                             <input type="text" name="PhoneNum" class="form-control" id="inputPassword" placeholder="07X-XXXXXXX" required>
+                        </div>
+                        
+                        <div class="form-group-row">
+                        <label for="inputPassword" class="col-sm-4 col-form-label">Email</label>
+                        <div class="col-sm-8">
+                            <input type="text" name="email" class="form-control" id="inputPassword" placeholder="someone@something.com" required>
                         </div>
                         </div>
                         <div class="form-group row">
@@ -57,7 +63,7 @@
             </div>
         </div>
         <div class="container-fluid footer-copyright">
-            <p>Copyright: Hotel reamy View 2022</p>
+            <p>Copyright: Hotel dreamy View 2022</p>
         </div>
     </body>
 </html>
