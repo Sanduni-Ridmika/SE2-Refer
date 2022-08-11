@@ -19,30 +19,28 @@
    </head>
 <body>
     <div id="navbar-div"><%@include file="./navbar.jsp"%></div>
-    <img class="img" src="img/hotel2.jpg">
+    <img class="img" src="img/hotel12.jpg">
   <div class="center">
-      <div class="title"><h1>Hotel Dreamy View</h1></div>
     <div class="sub_title">We believe leisure is an art</div>
-    <div class="btns">
-            <button><a href="./reservations.jsp" class="btn btn-primary">Book Now</a></button>
-    </div>
+    <br><br>
+            <button class = "button1"><a href="./reservations.jsp" > Book Now</a></button>
   </div>
     
     <div class="container">
   <div class="box">
-    <img src="https://source.unsplash.com/1000x800">
+      <a href="reservations.jsp" ><img src="img/regular.jpg"> </a>
     <span>Regular</span>
   </div>
   <div class="box">
-    <img src="https://source.unsplash.com/1000x802">
-    <span>Semi Deluxe</span>
+      <a href="reservations.jsp" > <img src="img/semi-deluxe.jpg"> </a>
+      <div class="centered-text"> Semi Deluxe</div>
   </div>
   <div class="box">
-    <img src="https://source.unsplash.com/1000x804">
+      <a href="reservations.jsp" > <img src="img/deluxe.jpg"> </a>
     <span>Deluxe</span>
   </div>
   <div class="box">
-    <img src="https://source.unsplash.com/1000x806">
+      <a href="reservations.jsp" > <img src="img/king.jpg"> </a>
     <span>King</span>
   </div>
 </div>

@@ -35,7 +35,7 @@ body
 
 .form-header
 {
-   color: #FFC164;
+   color: #00134d;
    font-size: 60px;
    font-weight: bold;
 }
@@ -47,7 +47,7 @@ body
 
 .dropdown-text
 {
-    color: #FFC164;
+    color: #00134d;
     font-size: 15px;
     text-align: right;
 }
@@ -71,7 +71,7 @@ body
     padding-right: 150px;
     padding-left: 150px;
     border-radius: 20px;
-    border: 2px solid #FFC164;
+    border: 2px solid #002699;
     padding-top: 60px;
     padding-bottom: 60px;
 }
@@ -90,7 +90,7 @@ label
     max-width: 450px;
     width: 100%;
     outline: none;
-    border: 1px solid #FFC164;
+    border: 1px solid #00134d;
     font-size: 15px;
     padding: 8px 10px;
     border-radius: 15px;
@@ -106,7 +106,7 @@ label
 .Num_input{
     width: 100%;
     outline: none;
-    border: 1px solid #FFC164;
+    border: 1px solid #00134d;
     box-sizing: border-box;
     width: 100px;  
     font-size: 15px;
@@ -117,7 +117,7 @@ label
 
 .select_input {
      outline: none;
-    border: 1px solid #FFC164;
+    border: 1px solid #00134d;
     box-sizing: border-box;
     font-size: 15px;
     background-color: white;
@@ -127,11 +127,11 @@ label
 }
 
 .input:focus{
-    border: 2px solid #FFC164;
+    border: 2px solid #00134d;
 }
 
 .Num_input:focus{
-    border: 2px solid #FFC164;
+    border: 2px solid #00134d;
 }
 
 .btn{
@@ -140,7 +140,7 @@ label
     padding: 10px 20px;
     font-size: 15px;
     border: 0;
-    background: #FFC164;
+    background: #00134d;
     color:#fff;
     cursor: pointer;
     border-radius: 15px;
@@ -151,5 +151,5 @@ label
 .pro{
     margin-top: 50px !important;
     font-size: 36px;
-    color:#FFC164;
+    color:#00134d;
 }

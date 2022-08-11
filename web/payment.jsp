@@ -20,10 +20,8 @@
     </head>
     <body>
         <div id="navbar-div"><%@include file="./navbar.jsp"%></div>
-        <br><br><br><br>
-        <div class="reserve-header-image">
-            <h1 class="header-text">Payment Method</h1>
-        </div>
+        <br><br><br>
+
         <p class="pro">Proceed to Pay:</p>
         
         <div class="form-container" style="margin-top: 5px; margin-bottom: 35px">
