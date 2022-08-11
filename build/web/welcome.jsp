@@ -18,6 +18,7 @@
     <link href="CSS/welcome.css" rel="stylesheet" type="text/css"/>
    </head>
 <body>
+    <div id="navbar-div"><%@include file="./navbar.jsp"%></div>
     <img class="img" src="img/hotel2.jpg">
   <div class="center">
       <div class="title"><h1>Hotel Dreamy View</h1></div>

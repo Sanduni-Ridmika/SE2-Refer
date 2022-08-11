@@ -1,6 +1,6 @@
 <%-- 
-    Document   : UserSession
-    Created on : 10-Aug-2022, 11:17:21 PM
+    Document   : userprofile
+    Created on : 11-Aug-2022, 5:04:32 PM
     Author     : Sanduni Ridmika
 --%>
 
@@ -11,6 +11,7 @@
         response.sendRedirect("index.jsp");
     }
 %>
+
 <!DOCTYPE html>
 <html>
     <head>
@@ -18,14 +19,10 @@
         <title>JSP Page</title>
     </head>
     <body>
-        <h1>
- Welcome, <%= user.getName() %></h1>
-<h3>
-Your Account ID: <%= user.getId() %> </h3>
-<h3>
-Your Email: <%= user.getEmail() %> </h3>
-<h3>
-Your Password: <%= user.getPassword() %></h3>
-<button><a href="LogoutServlet">Log Out</a></button>
+        <h1>Welcome, <%= user.getName() %></h1>
+        <h3>Your Account ID: <%= user.getId() %> </h3>
+        <h3>Your Email: <%= user.getEmail() %> </h3>
+        <h3>Your Password: <%= user.getPassword() %></h3>
+        <button><a href="LogoutServlet">Log Out</a></button>
     </body>
 </html>

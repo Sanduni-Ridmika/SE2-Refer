@@ -19,7 +19,8 @@
         
     </head>
     <body>
-        <br><br>
+        <div id="navbar-div"><%@include file="./navbar.jsp"%></div>
+        <br><br><br><br>
         <div class="reserve-header-image">
             <h1 class="header-text">Payment Method</h1>
         </div>

@@ -4,18 +4,12 @@ import javax.servlet.*;
 import javax.servlet.http.*;
 import javax.servlet.jsp.*;
 
-public final class payment_jsp extends org.apache.jasper.runtime.HttpJspBase
+public final class footer_jsp extends org.apache.jasper.runtime.HttpJspBase
     implements org.apache.jasper.runtime.JspSourceDependent {
 
   private static final JspFactory _jspxFactory = JspFactory.getDefaultFactory();
 
   private static java.util.List<String> _jspx_dependants;
-
-  static {
-    _jspx_dependants = new java.util.ArrayList<String>(2);
-    _jspx_dependants.add("/./navbar.jsp");
-    _jspx_dependants.add("/./footer.jsp");
-  }
 
   private org.glassfish.jsp.api.ResourceInjector _jspx_resourceInjector;
 
@@ -47,109 +41,6 @@ public final class payment_jsp extends org.apache.jasper.runtime.HttpJspBase
       _jspx_out = out;
       _jspx_resourceInjector = (org.glassfish.jsp.api.ResourceInjector) application.getAttribute("com.sun.appserv.jsp.resource.injector");
 
-      out.write("\n");
-      out.write("\n");
-      out.write("\n");
-      out.write("<!DOCTYPE html>\n");
-      out.write("<html>\n");
-      out.write("    <head>\n");
-      out.write("        <meta http-equiv=\"Content-Type\" content=\"text/html; charset=UTF-8\">\n");
-      out.write("        <meta name=\"viewport\" content=\"width=device-width, initial-scale=1.0\">\n");
-      out.write("        <title>Reservation Payment</title>\n");
-      out.write("        <link href=\"http://fonts.cdnfonts.com/css/poppins\" rel=\"stylesheet\">\n");
-      out.write("        <link href=\"https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css\" rel=\"stylesheet\" integrity=\"sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3\" crossorigin=\"anonymous\">\n");
-      out.write("        <script src=\"https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js\" integrity=\"sha384-ka7Sk0Gln4gmtz2MlQnikT1wXgYsOg+OMhuP+IlRH9sENBO0LRn5q+8nbTov4+1p\" crossorigin=\"anonymous\"></script>\n");
-      out.write("        <link href=\"CSS/footer.css\" rel=\"stylesheet\" type=\"text/css\"/>\n");
-      out.write("        <link href=\"CSS/payment.css\" rel=\"stylesheet\" type=\"text/css\"/>\n");
-      out.write("        \n");
-      out.write("    </head>\n");
-      out.write("    <body>\n");
-      out.write("        <div id=\"navbar-div\">");
-      out.write("\n");
-      out.write("\n");
-      out.write("\n");
-      out.write("<!DOCTYPE html>\n");
-      out.write("<html>\n");
-      out.write("    <head>\n");
-      out.write("        <meta http-equiv=\"Content-Type\" content=\"text/html; charset=UTF-8\">\n");
-      out.write("        <link href=\"CSS/navbar.css\" rel=\"stylesheet\" type=\"text/css\"/>\n");
-      out.write("    </head>\n");
-      out.write("    <body>\n");
-      out.write("        <nav>\n");
-      out.write("            <div class=\"menu\">\n");
-      out.write("                <div class=\"logo\">\n");
-      out.write("                    <a href=\"#\">Dreamy View</a>\n");
-      out.write("                </div>\n");
-      out.write("                <ul>\n");
-      out.write("                    <li><a href=\"welcome.jsp\">Home</a></li>\n");
-      out.write("                    <li><a href=\"reservations.jsp\">Reservation</a></li>\n");
-      out.write("                    <li><a href=\"contact.jsp\">Contact</a></li>\n");
-      out.write("                    <li><a href=\"userprofile.jsp\">Profile</a></li>\n");
-      out.write("                </ul>\n");
-      out.write("            </div>\n");
-      out.write("        </nav>\n");
-      out.write("    </body>\n");
-      out.write("</html>\n");
-      out.write("</div>\n");
-      out.write("        <br><br>\n");
-      out.write("        <div class=\"reserve-header-image\">\n");
-      out.write("            <h1 class=\"header-text\">Payment Method</h1>\n");
-      out.write("        </div>\n");
-      out.write("        <p class=\"pro\">Proceed to Pay:</p>\n");
-      out.write("        \n");
-      out.write("        <div class=\"form-container\" style=\"margin-top: 5px; margin-bottom: 35px\">\n");
-      out.write("            \n");
-      out.write("            \n");
-      out.write("        <!--Paypal Integration-->\n");
-      out.write("        <div id=\"smart-button-container\">\n");
-      out.write("            <div style=\"text-align: center;\">\n");
-      out.write("                <div id=\"paypal-button-container\"></div>\n");
-      out.write("            </div>\n");
-      out.write("        </div>\n");
-      out.write("        <script src=\"https://www.paypal.com/sdk/js?client-id=AZqmVQ1MBwZ6ZwYLO4vqM5YMHPJ9TwreV8KrGt-008vefR4X3J8XfGu-6KEjRj7QUFm8ErYt4PHPzdaA\" data-sdk-integration-source=\"button-factory\"></script>\n");
-      out.write("        <script>\n");
-      out.write("            function initPayPalButton() {\n");
-      out.write("                paypal.Buttons({\n");
-      out.write("                    style: {\n");
-      out.write("                        shape: 'rect',\n");
-      out.write("                        color: 'gold',\n");
-      out.write("                        layout: 'vertical',\n");
-      out.write("                        label: 'paypal',\n");
-      out.write("\n");
-      out.write("                    },\n");
-      out.write("\n");
-      out.write("                    createOrder: function (data, actions) {\n");
-      out.write("                        return actions.order.create({\n");
-      out.write("                            purchase_units: [{\"amount\": {\"currency_code\": \"USD\", \"value\": 1}}]\n");
-      out.write("                        });\n");
-      out.write("                    },\n");
-      out.write("\n");
-      out.write("                    onApprove: function (data, actions) {\n");
-      out.write("                        return actions.order.capture().then(function (orderData) {\n");
-      out.write("\n");
-      out.write("                            // Available details\n");
-      out.write("                            console.log('Capture result', orderData, JSON.stringify(orderData, null, 2));\n");
-      out.write("\n");
-      out.write("                            // Successfull message\n");
-      out.write("                            const element = document.getElementById('paypal-button-container');\n");
-      out.write("                            element.innerHTML = '';\n");
-      out.write("                            element.innerHTML = '<h3>Your Payment is Successful <br>Thank you for your payment!</h3>';\n");
-      out.write("\n");
-      out.write("                            // show thank you message\n");
-      out.write("\n");
-      out.write("                        });\n");
-      out.write("                    },\n");
-      out.write("\n");
-      out.write("                    onError: function (err) {\n");
-      out.write("                        console.log(err);\n");
-      out.write("                    }\n");
-      out.write("                }).render('#paypal-button-container');\n");
-      out.write("            }\n");
-      out.write("            initPayPalButton();\n");
-      out.write("        </script> \n");
-      out.write("        \n");
-      out.write("        </div>\n");
-      out.write("        <div id=\"footer-div\">");
       out.write("\n");
       out.write("\n");
       out.write("\n");
@@ -214,9 +105,6 @@ public final class payment_jsp extends org.apache.jasper.runtime.HttpJspBase
       out.write("            <p>Copyright: Hotel dreamy View 2022</p>\n");
       out.write("        </div>\n");
       out.write("    </body>\n");
-      out.write("</html>\n");
-      out.write("</div>\n");
-      out.write("</body>\n");
       out.write("</html>\n");
     } catch (Throwable t) {
       if (!(t instanceof SkipPageException)){

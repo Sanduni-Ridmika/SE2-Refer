@@ -3,9 +3,8 @@ package org.apache.jsp;
 import javax.servlet.*;
 import javax.servlet.http.*;
 import javax.servlet.jsp.*;
-import Model.User;
 
-public final class UserSession_jsp extends org.apache.jasper.runtime.HttpJspBase
+public final class registration_jsp extends org.apache.jasper.runtime.HttpJspBase
     implements org.apache.jasper.runtime.JspSourceDependent {
 
   private static final JspFactory _jspxFactory = JspFactory.getDefaultFactory();
@@ -45,27 +44,31 @@ public final class UserSession_jsp extends org.apache.jasper.runtime.HttpJspBase
       out.write("\n");
       out.write("\n");
       out.write("\n");
-      out.write("\n");
- User user = (User) session.getAttribute("logUser");
-        out.print("Welcome, "+user.getName());
-    }
-
-      out.write('\n');
-      out.write("\n");
-      out.write("\n");
-      out.write("\n");
       out.write("<!DOCTYPE html>\n");
       out.write("<html>\n");
       out.write("    <head>\n");
       out.write("        <meta http-equiv=\"Content-Type\" content=\"text/html; charset=UTF-8\">\n");
-      out.write("        <title>JSP Page</title>\n");
+      out.write("        <title>Register Account</title>\n");
+      out.write("        <link href=\"https://fonts.googleapis.com/css?family=ZCOOL+XiaoWei\" rel=\"stylesheet\">\n");
+      out.write("        <link href=\"CSS/style.css\" rel=\"stylesheet\" type=\"text/css\"/>\n");
       out.write("    </head>\n");
       out.write("    <body>\n");
-      out.write("        <h1>\"Welcome, \"+ user.getName()</h1>\n");
-      out.write("        <h3>\"Your Account ID: \"+user.getId() </h3>\n");
-      out.write("        <h3>\"Your Email: \" +user.getEmail() </h3>\n");
-      out.write("        <h3>\"Your Password: \" +user.getPassword()</h3>\n");
-      out.write("        <button><a href=\"LogoutServlet\">Log Out</a></button>\n");
+      out.write("        <div class=\"container\">\n");
+      out.write("            <div class=\"regbox box\">\n");
+      out.write("                <img class=\"avatar\" src=\"img/collaboration.png\">\n");
+      out.write("                <h1>Register Account</h1>\n");
+      out.write("                <form action=\"RegisterServlet\" method=\"post\">\n");
+      out.write("                    <p>Username</p>\n");
+      out.write("                    <input type=\"text\" placeholder=\"Username\" name=\"name\" required>\n");
+      out.write("                    <p>Email</p>\n");
+      out.write("                    <input type=\"text\" placeholder=\"Useremail\" name=\"email\" required>\n");
+      out.write("                    <p>Password</p>\n");
+      out.write("                    <input type=\"password\" placeholder=\"Password\" name=\"password\" required>\n");
+      out.write("                    <input type=\"submit\" value=\"Register\">\n");
+      out.write("                    <a href=\"index.jsp\">Already have Account?</a>\n");
+      out.write("                </form>\n");
+      out.write("            </div>\n");
+      out.write("        </div>\n");
       out.write("    </body>\n");
       out.write("</html>\n");
     } catch (Throwable t) {

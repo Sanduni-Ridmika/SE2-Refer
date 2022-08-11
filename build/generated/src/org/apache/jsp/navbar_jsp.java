@@ -3,9 +3,8 @@ package org.apache.jsp;
 import javax.servlet.*;
 import javax.servlet.http.*;
 import javax.servlet.jsp.*;
-import Model.User;
 
-public final class UserSession_jsp extends org.apache.jasper.runtime.HttpJspBase
+public final class navbar_jsp extends org.apache.jasper.runtime.HttpJspBase
     implements org.apache.jasper.runtime.JspSourceDependent {
 
   private static final JspFactory _jspxFactory = JspFactory.getDefaultFactory();
@@ -45,15 +44,6 @@ public final class UserSession_jsp extends org.apache.jasper.runtime.HttpJspBase
       out.write("\n");
       out.write("\n");
       out.write("\n");
-      out.write("\n");
- User user = (User) session.getAttribute("logUser");
-        out.print("Welcome, "+user.getName());
-    }
-
-      out.write('\n');
-      out.write("\n");
-      out.write("\n");
-      out.write("\n");
       out.write("<!DOCTYPE html>\n");
       out.write("<html>\n");
       out.write("    <head>\n");
@@ -61,11 +51,20 @@ public final class UserSession_jsp extends org.apache.jasper.runtime.HttpJspBase
       out.write("        <title>JSP Page</title>\n");
       out.write("    </head>\n");
       out.write("    <body>\n");
-      out.write("        <h1>\"Welcome, \"+ user.getName()</h1>\n");
-      out.write("        <h3>\"Your Account ID: \"+user.getId() </h3>\n");
-      out.write("        <h3>\"Your Email: \" +user.getEmail() </h3>\n");
-      out.write("        <h3>\"Your Password: \" +user.getPassword()</h3>\n");
-      out.write("        <button><a href=\"LogoutServlet\">Log Out</a></button>\n");
+      out.write("        <nav>\n");
+      out.write("            <div class=\"menu\">\n");
+      out.write("                <div class=\"logo\">\n");
+      out.write("                    <a href=\"#\">CodingLab</a>\n");
+      out.write("                </div>\n");
+      out.write("                <ul>\n");
+      out.write("                    <li><a href=\"#\">Home</a></li>\n");
+      out.write("                    <li><a href=\"#\">About</a></li>\n");
+      out.write("                    <li><a href=\"#\">Services</a></li>\n");
+      out.write("                    <li><a href=\"#\">Contact</a></li>\n");
+      out.write("                    <li><a href=\"#\">Feedback</a></li>\n");
+      out.write("                </ul>\n");
+      out.write("            </div>\n");
+      out.write("        </nav>\n");
       out.write("    </body>\n");
       out.write("</html>\n");
     } catch (Throwable t) {

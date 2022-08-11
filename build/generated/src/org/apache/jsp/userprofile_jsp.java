@@ -5,7 +5,7 @@ import javax.servlet.http.*;
 import javax.servlet.jsp.*;
 import Model.User;
 
-public final class UserSession_jsp extends org.apache.jasper.runtime.HttpJspBase
+public final class userprofile_jsp extends org.apache.jasper.runtime.HttpJspBase
     implements org.apache.jasper.runtime.JspSourceDependent {
 
   private static final JspFactory _jspxFactory = JspFactory.getDefaultFactory();
@@ -47,12 +47,10 @@ public final class UserSession_jsp extends org.apache.jasper.runtime.HttpJspBase
       out.write("\n");
       out.write("\n");
  User user = (User) session.getAttribute("logUser");
-        out.print("Welcome, "+user.getName());
+    if(user==null){
+        response.sendRedirect("index.jsp");
     }
 
-      out.write('\n');
-      out.write("\n");
-      out.write("\n");
       out.write("\n");
       out.write("<!DOCTYPE html>\n");
       out.write("<html>\n");
@@ -61,13 +59,21 @@ public final class UserSession_jsp extends org.apache.jasper.runtime.HttpJspBase
       out.write("        <title>JSP Page</title>\n");
       out.write("    </head>\n");
       out.write("    <body>\n");
-      out.write("        <h1>\"Welcome, \"+ user.getName()</h1>\n");
-      out.write("        <h3>\"Your Account ID: \"+user.getId() </h3>\n");
-      out.write("        <h3>\"Your Email: \" +user.getEmail() </h3>\n");
-      out.write("        <h3>\"Your Password: \" +user.getPassword()</h3>\n");
+      out.write("        <h1>Welcome, ");
+      out.print( user.getName() );
+      out.write("</h1>\n");
+      out.write("        <h3>Your Account ID: ");
+      out.print( user.getId() );
+      out.write(" </h3>\n");
+      out.write("        <h3>Your Email: ");
+      out.print( user.getEmail() );
+      out.write(" </h3>\n");
+      out.write("        <h3>Your Password: ");
+      out.print( user.getPassword() );
+      out.write("</h3>\n");
       out.write("        <button><a href=\"LogoutServlet\">Log Out</a></button>\n");
       out.write("    </body>\n");
-      out.write("</html>\n");
+      out.write("</html>");
     } catch (Throwable t) {
       if (!(t instanceof SkipPageException)){
         out = _jspx_out;

@@ -41,7 +41,7 @@ public class LoginServlet extends HttpServlet {
             
             if(user!=null){
                 HttpSession session = request.getSession();
-                session.setAttribute("loguser", user);
+                session.setAttribute("logUser", user);
                 response.sendRedirect("welcome.jsp");
             }else{
                 out.print("user not found");

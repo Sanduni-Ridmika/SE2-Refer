@@ -5,10 +5,14 @@ JSP
 *F
 + 0 payment.jsp
 payment.jsp
-+ 1 footer.jsp
++ 1 navbar.jsp
+./navbar.jsp
++ 2 footer.jsp
 ./footer.jsp
 *L
-5,76:49
-5#1,60:125
-80#0,4:184
+5,18:50
+5#1,26:68
+22#0,60:93
+5#2,66:153
+81#0,4:218
 *E
