@@ -12,17 +12,50 @@
     }
 %>
 
-<!DOCTYPE html>
-<html>
-    <head>
-        <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
-        <title>JSP Page</title>
+<html><head>
+        <title> Profile </title>
+     <link href="CSS/userprofile.css" rel="stylesheet" type="text/css"/>
     </head>
     <body>
-        <h1>Welcome, <%= user.getName() %></h1>
-        <h3>Your Account ID: <%= user.getId() %> </h3>
-        <h3>Your Email: <%= user.getEmail() %> </h3>
-        <h3>Your Password: <%= user.getPassword() %></h3>
-        <button><a href="LogoutServlet">Log Out</a></button>
+        <div id="navbar-div"><%@include file="./navbar.jsp"%></div>
+        <h3 class = "title-head"> User Profile </h3>
+        <div class="row">
+            <div class="column left" style="background-color:#e6e6e6;">
+                <h2>Name</h2> 
+            </div>
+            <div class="column right" style="background-color:#f2f2f2;">
+                <h3> <%= user.getName() %> </h3>
+            </div>
+        </div>
+            <br>
+        <div class="row">
+            <div class="column left" style="background-color:#e6e6e6;">
+                <h2>Account ID</h2> 
+            </div>
+            <div class="column right" style="background-color:#f2f2f2;">
+                <h3> <%= user.getId() %> </h3>
+            </div>
+        </div>
+            <br>
+        <div class="row">
+            <div class="column left" style="background-color:#e6e6e6;">
+                <h2>Email</h2> 
+            </div>
+            <div class="column right" style="background-color:#f2f2f2;">
+                <h3> <%= user.getEmail() %> </h3>
+            </div>
+        </div>
+            <br>
+        <div class="row">
+            <div class="column left" style="background-color:#e6e6e6;">
+                <h2>Password</h2> 
+            </div>
+            <div class="column right" style="background-color:#f2f2f2;">
+                <h3> <%= user.getPassword() %> </h3>
+            </div>
+        </div>
+            <br>
+            <button class="button1"><a href="LogoutServlet">Log Out</a></button>
+            <br> <br>
     </body>
 </html>

@@ -22,7 +22,8 @@
         <div id="navbar-div"><%@include file="./navbar.jsp"%></div>
             <div class="row">
                 <div class="col-6 form-header">
-                    <span><br>&nbsp; Book Yours Now!</span>
+                    <br>
+                    <h1>&nbsp; Book Yours Now!</h1>
                 </div>
             </div>
 
