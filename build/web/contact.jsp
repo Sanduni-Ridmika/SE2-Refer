@@ -50,46 +50,8 @@
 			<div class="col-xs-12">
                                 <button type="submit" class="button1">Submit</button>
 			</div>
-	</div>
-            </form>
-</div>
-
-        <%--<div class="container-fluid footer">
-                <div class="col-8 footer-form">
-                    <h3>Contact Us</h3>
-                    <form method="POST" action="SendEmail">
-                        <div class="form-group row">
-                            <label for="inputPassword" class="col-sm-4 col-form-label">Name</label>
-                        <div class="col-sm-8">
-                            <input type="text" name="Fname" class="form-control" id="inputPassword" placeholder="Full Name" required>
-                        </div>
-                        </div>
-                        <div class="form-group row">
-                            <label for="inputPassword" class="col-sm-4 col-form-label">Phone Number</label>
-                        <div class="col-sm-8">
-                            <input type="text" name="PhoneNum" class="form-control" id="inputPassword" placeholder="07X-XXXXXXX" required>
-                        </div>
-                        
-                        <div class="form-group row">
-                            <label for="inputPassword" class="col-sm-4 col-form-label">Email</label>
-                        <div class="col-sm-8">
-                            <input type="text" name="email" class="form-control" id="inputPassword" placeholder="someone@something.com" required>
-                        </div>
-                        </div>
-                        <div class="form-group row">
-                            <label for="inputPassword" class="col-sm-4 col-form-label">Message</label>
-                        <div class="col-sm-8">
-                            <textarea class="form-control" name="Message" id="exampleFormControlTextarea1" rows="3" required></textarea>
-                        </div>
-                        </div>
-                        <div class="form-group row btn-form-group">
-                            <div class="col-sm-12">
-                            <button type="submit" class="btn btn-primary">Submit</button>
-                        </div>
-                        </div>
-                    </form>
                 </div>
-            </div>
-        </div> --%>
+            </form>
+        </div>
     </body>
 </html>

@@ -48,7 +48,6 @@ public final class footer_jsp extends org.apache.jasper.runtime.HttpJspBase
       out.write("<html>\n");
       out.write("    <head>\n");
       out.write("        <meta http-equiv=\"Content-Type\" content=\"text/html; charset=UTF-8\">\n");
-      out.write("        <title>Footer</title>\n");
       out.write("        <link href=\"http://fonts.cdnfonts.com/css/poppins\" rel=\"stylesheet\">\n");
       out.write("        <link href=\"https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css\" rel=\"stylesheet\" integrity=\"sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3\" crossorigin=\"anonymous\">\n");
       out.write("        <script src=\"https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js\" integrity=\"sha384-ka7Sk0Gln4gmtz2MlQnikT1wXgYsOg+OMhuP+IlRH9sENBO0LRn5q+8nbTov4+1p\" crossorigin=\"anonymous\"></script>\n");
@@ -59,8 +58,8 @@ public final class footer_jsp extends org.apache.jasper.runtime.HttpJspBase
       out.write("            <div class=\"row\">\n");
       out.write("                <div class=\"col-4\">\n");
       out.write("                    <div class=\"row\">\n");
-      out.write("                        <p>\n");
-      out.write("                            Designed to inspire rest and relaxation, our sleek, a modern hotel room features a king of facilities and incredible sea views. Designed to inspire rest and relaxation, our sleek.\n");
+      out.write("                        <p class=\"text-footer\">\n");
+      out.write("                            Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.\n");
       out.write("                        </p>\n");
       out.write("                    </div>\n");
       out.write("                    \n");
@@ -80,7 +79,7 @@ public final class footer_jsp extends org.apache.jasper.runtime.HttpJspBase
       out.write("                            <input type=\"text\" name=\"PhoneNum\" class=\"form-control\" id=\"inputPassword\" placeholder=\"07X-XXXXXXX\" required>\n");
       out.write("                        </div>\n");
       out.write("                        \n");
-      out.write("                        <div class=\"form-group-row\">\n");
+      out.write("                        <div class=\"form-group row\">\n");
       out.write("                        <label for=\"inputPassword\" class=\"col-sm-4 col-form-label\">Email</label>\n");
       out.write("                        <div class=\"col-sm-8\">\n");
       out.write("                            <input type=\"text\" name=\"email\" class=\"form-control\" id=\"inputPassword\" placeholder=\"someone@something.com\" required>\n");
@@ -94,11 +93,12 @@ public final class footer_jsp extends org.apache.jasper.runtime.HttpJspBase
       out.write("                        </div>\n");
       out.write("                        <div class=\"form-group row btn-form-group\">\n");
       out.write("                            <div class=\"col-sm-12\">\n");
-      out.write("                            <button type=\"submit\" class=\"btn btn-primary\">Submit</button>\n");
+      out.write("                            <button type=\"submit\" class=\"button2\">Submit</button>\n");
       out.write("                        </div>\n");
       out.write("                        </div>\n");
-      out.write("                    </form>\n");
       out.write("                </div>\n");
+      out.write("                    </form>\n");
+      out.write("\n");
       out.write("            </div>\n");
       out.write("        </div>\n");
       out.write("        <div class=\"container-fluid footer-copyright\">\n");

@@ -29,7 +29,7 @@
 
         <div class="container form-container ">
             <div class="reserve2">
-                <form class="form" method="POST" action="../reservation" >
+                <form class="form" method="POST" action="payment.jsp" >
                     <div class="input_field">
                         <label>Select room type</label>
                          <select class="browser-default custom-select select_input" name="roomType">
@@ -66,7 +66,8 @@
                     </div>
                     </div>
                     <div class="input_field">
-                        <button><a href="./payment.jsp" class="btn">Proceed To Pay</a></button>
+                        <button type="submit" class="button1">Proceed To Pay</button>
+                        <%--<input type="submit" class="btn" value="Proceed To Pay">--%>
                     </div>
                     
                 </form>
