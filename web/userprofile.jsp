@@ -51,11 +51,22 @@
                 <h2>Password</h2> 
             </div>
             <div class="column right" style="background-color:#f2f2f2;">
-                <h3> <%= user.getPassword() %> </h3>
+                <h3 type="password" value="FakePSW" id="myInput"><%= user.getPassword() %> </h3>
+               <%-- <input type="checkbox" onclick="myFunction()">&nbsp; Show Password--%>
             </div>
         </div>
             <br>
             <button class="button1"><a href="LogoutServlet">Log Out</a></button>
             <br> <br>
+            <script>
+                function myFunction() {
+                    var x = document.getElementById("myInput");
+                    if (x.type === "password") {
+                        x.type = "text";
+                    } else {
+                        x.type = "password";
+                    }
+                }
+                        </script>
     </body>
 </html>

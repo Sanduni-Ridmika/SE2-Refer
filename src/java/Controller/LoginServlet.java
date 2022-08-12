@@ -44,7 +44,8 @@ public class LoginServlet extends HttpServlet {
                 session.setAttribute("logUser", user);
                 response.sendRedirect("welcome.jsp");
             }else{
-                out.print("user not found");
+                out.println("<center><h2 style='color:red;'>User not found.</h2>");
+                out.println("Click <a href=\"./registration.jsp\" class=\"btn\">HERE</a> to create a new account</center>");
             }
 
             out.println("</body>");

@@ -9,7 +9,7 @@ and open the template in the editor.
 */
 
 body {
-    background-image: url(../img/green-curry-background.jpg);
+    background-image: url(../img/bg-6.jpg);
     background-size: cover;
     background-repeat: no-repeat;
     font-family: 'Arimo', sans-serif;
@@ -33,7 +33,7 @@ body {
 .regbox{
     width: 320px;
     height: 420px;
-    background: #2f3542;
+    background: #15181e;
     margin: 0;
     padding: 30px;
     top: 55%;

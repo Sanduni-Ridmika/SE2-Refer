@@ -11,6 +11,7 @@
 <!DOCTYPE html>
 <html lang="en" dir="ltr">
   <head>
+      <title> Home </title>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="style.css">
@@ -25,26 +26,59 @@
     <br><br>
             <button class = "button1"><a href="./reservations.jsp" > Book Now</a></button>
   </div>
-    
-    <div class="container">
-  <div class="box">
-      <a href="reservations.jsp" ><img src="img/regular.jpg"> </a>
-    <span>Regular</span>
-  </div>
-  <div class="box">
-      <a href="reservations.jsp" > <img src="img/semi-deluxe.jpg"> </a>
-      <div class="centered-text"> Semi Deluxe</div>
-  </div>
-  <div class="box">
-      <a href="reservations.jsp" > <img src="img/deluxe.jpg"> </a>
-    <span>Deluxe</span>
-  </div>
-  <div class="box">
-      <a href="reservations.jsp" > <img src="img/king.jpg"> </a>
-    <span>King</span>
-  </div>
-</div>
-    
+    <div class="container11">
+        <a href="reservations.jsp" >
+            <div class="card11">
+                <div class="face face1">
+                    <div class="content11">
+                        <p class="cardinside">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
+                    </div>
+                </div>
+                <div class="face face2">
+                    <h2>Regular</h2>
+                </div>
+            </div>
+        </a>
+        
+        <a href="reservations.jsp" >
+            <div class="card11">
+                <div class="face face1">
+                    <div class="content11">
+                        <p class="cardinside">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
+                    </div>
+                </div>
+                <div class="face face2">
+                    <h2>Semi-Deluxe</h2>
+                </div>
+            </div>
+        </a>
+        
+        <a href="reservations.jsp" >
+            <div class="card11">
+                <div class="face face1">
+                    <div class="content11">
+                        <p class="cardinside">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
+                    </div>
+                </div>
+                <div class="face face2">
+                    <h2>Deluxe</h2>
+                </div>
+            </div>
+        </a>
+        
+        <a href="reservations.jsp" >
+            <div class="card11">
+                <div class="face face1">
+                    <div class="content11">
+                        <p class="cardinside">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
+                    </div>
+                </div>
+                <div class="face face2">
+                    <h2>King</h2>
+                </div>
+            </div>
+        </a>
+    </div>    
     <div id="footer-div"><%@include file="./footer.jsp"%></div>
     
 </body>
