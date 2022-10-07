@@ -36,11 +36,11 @@ public class User {
         this.password = password;
     }
 
-    public int getId() {
+    public int getId() { //applying getter for the id
         return id;
     }
 
-    public void setId(int id) {
+    public void setId(int id) { //applying setter for the id
         this.id = id;
     }
 
