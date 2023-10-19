@@ -1,1 +1,1 @@
-Hotel booking web application 
+Hotel booking web application using netbeans IDE
